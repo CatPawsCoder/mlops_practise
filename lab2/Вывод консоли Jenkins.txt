@@ -1,31 +1,31 @@
 Running as SYSTEM
-Building in workspace C:\ProgramData\Jenkins\.jenkins\workspace\pipeline2
-[pipeline2] $ cmd /c call C:\WINDOWS\TEMP\jenkins13491237794846410238.bat
+Building in workspace /workspace/pipeline2
+[pipeline2] $ cmd /c call /tmp/jenkins13491237794846410238.bat
 
-C:\ProgramData\Jenkins\.jenkins\workspace\pipeline2>echo "----Create Dataset (begin)-----" 
+/workspace/pipeline2>echo "----Create Dataset (begin)-----"
 "----Create Dataset (begin)-----"
 
-C:\ProgramData\Jenkins\.jenkins\workspace\pipeline2>D:\ForPython\python.exe D:\MLops\mlops_practise\lab2\create_dataset.py 
+/workspace/pipeline2>/usr/bin/python3 ../../../../../mlops_practise/lab2/create_dataset.py
 
-C:\ProgramData\Jenkins\.jenkins\workspace\pipeline2>echo "----Create Dataset (end)-----" 
+/workspace/pipeline2>echo "----Create Dataset (end)-----"
 "----Create Dataset (end)-----"
 
-C:\ProgramData\Jenkins\.jenkins\workspace\pipeline2>echo "----Train the Model (begin)-----" 
+/workspace/pipeline2>echo "----Train the Model (begin)-----"
 "----Train the Model (begin)-----"
 
-C:\ProgramData\Jenkins\.jenkins\workspace\pipeline2>D:\ForPython\python.exe D:\MLops\mlops_practise\lab2\train_model.py 
+/workspace/pipeline2>/usr/bin/python3 ../../../../../mlops_practise/lab2/train_model.py
 
-C:\ProgramData\Jenkins\.jenkins\workspace\pipeline2>echo "----Train the Model (end)-----" 
+/workspace/pipeline2>echo "----Train the Model (end)-----"
 "----Train the Model (end)-----"
 
-C:\ProgramData\Jenkins\.jenkins\workspace\pipeline2>echo "----Use the Model for Prediction (begin)-----" 
+/workspace/pipeline2>echo "----Use the Model for Prediction (begin)-----"
 "----Use the Model for Prediction (begin)-----"
 
-C:\ProgramData\Jenkins\.jenkins\workspace\pipeline2>D:\ForPython\python.exe D:\MLops\mlops_practise\lab2\make_prediction.py 
+/workspace/pipeline2>/usr/bin/python3 ../../../../.../mlops_practise/lab2/make_prediction.py
 Predictions for the first five samples: [0 0 0 0 0]
 
-C:\ProgramData\Jenkins\.jenkins\workspace\pipeline2>echo "----Use the Model for Prediction (end)-----" 
+/workspace/pipeline2>echo "----Use the Model for Prediction (end)-----"
 "----Use the Model for Prediction (end)-----"
 
-C:\ProgramData\Jenkins\.jenkins\workspace\pipeline2>exit 0 
+/workspace/pipeline2>exit 0
 Finished: SUCCESS
