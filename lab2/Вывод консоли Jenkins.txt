@@ -1,54 +1,36 @@
 Running as SYSTEM
-Building in workspace [workspace]
+Building in workspace \workspace\pipeline2
 The recommended git tool is: NONE
 No credentials specified
-Cloning the remote Git repository
-Cloning repository [repository URL]
- > git.exe init [workspace] # timeout=10
-Fetching upstream changes from [repository URL]
- > git.exe --version # timeout=10
- > git --version # 'git version 2.45.1.windows.1'
- > git.exe fetch --tags --force --progress -- [repository URL] +refs/heads/*:refs/remotes/origin/* # timeout=10
- > git.exe config remote.origin.url [repository URL] # timeout=10
- > git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
-Avoid second fetch
- > git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
-Checking out Revision [revision] (refs/remotes/origin/main)
- > git.exe config core.sparsecheckout # timeout=10
- > git.exe checkout -f [revision] # timeout=10
-Commit message: [commit message]
-First time build. Skipping changelog.
-[pipeline2] $ cmd /c call [batch script]
+Fetching changes from the remote Git repository
+Fetching upstream changes from https://github.com/CatPawsCoder/mlops_practise.git
+Checking out Revision 5e974a10a92e7a1a0d01cf85cba7ada39ca363be (refs/remotes/origin/main)
+Commit message: "build script"
+[pipeline2] $ cmd /c call \jenkins10276628009882127588.bat
 
-[workspace]>git clone [repository URL] 
+\workspace\pipeline2>REM Clean up existing directory if it exists
+
+\workspace\pipeline2>IF EXIST mlops_practise (rmdir /S /Q mlops_practise )
+
+\workspace\pipeline2>REM Clone the repository
+
+\workspace\pipeline2>git clone https://github.com/CatPawsCoder/mlops_practise.git
 Cloning into 'mlops_practise'...
 
-[workspace]>cd mlops_practise/lab2 
+\workspace\pipeline2>REM Navigate to the lab2 directory
 
-[workspace]\mlops_practise\lab2>echo "----Create Dataset (begin)-----" 
+\workspace\pipeline2>cd mlops_practise\lab2
+
+\workspace\pipeline2\mlops_practise\lab2>REM Run the build script
+
+\workspace\pipeline2\mlops_practise\lab2>set PYTHON_PATH=D:\ForPython
+
+\workspace\pipeline2\mlops_practise\lab2>call build_script.bat
 "----Create Dataset (begin)-----"
-
-[workspace]\mlops_practise\lab2>..\..\python.exe create_dataset.py 
-
-[workspace]\mlops_practise\lab2>echo "----Create Dataset (end)-----" 
 "----Create Dataset (end)-----"
-
-[workspace]\mlops_practise\lab2>echo "----Train the Model (begin)-----" 
 "----Train the Model (begin)-----"
-
-[workspace]\mlops_practise\lab2>..\...\python.exe train_model.py 
-
-[workspace]\mlops_practise\lab2>echo "----Train the Model (end)-----" 
 "----Train the Model (end)-----"
-
-[workspace]\mlops_practise\lab2>echo "----Use the Model for Prediction (begin)-----" 
 "----Use the Model for Prediction (begin)-----"
-
-[workspace]\mlops_practise\lab2>..\..\python.exe make_prediction.py 
 Predictions for the first five samples: [0 0 0 0 0]
-
-[workspace]\mlops_practise\lab2>echo "----Use the Model for Prediction (end)-----" 
 "----Use the Model for Prediction (end)-----"
-
-[workspace]\mlops_practise\lab2>exit 0 
 Finished: SUCCESS
